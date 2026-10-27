@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Ogas Integrated Services</title>
+  <meta name="description" content="Ogas Integrated Services brings farm produce sales, expert farm consulting and agro-processing together under one roof, helping you grow sustainably and profitably.">
+  <meta name="theme-color" content="#06140b">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Ogas Integrated Services">
+  <meta property="og:description" content="Farm produce sales, farm consulting and agro-processing under one roof.">
+
+  <link rel="icon" href="assets/icons/logo.ico" sizes="any">
+
+  <!-- Preload only the hero image that the visitor's screen will actually use -->
+  <link rel="preload" as="image" href="assets/images/hero-mobile.jpg" media="(max-width: 767px)" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/images/hero.jpg" media="(min-width: 768px)" fetchpriority="high">
+
+  <!-- Fonts: Cormorant Garamond (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Classic deferred script (not an ES module) so the site also works when opened via file:// -->
+  <script src="js/main.js" defer></script>
+</head>
+
+<body>
+  <!-- ===================================================================
+       ICON SPRITE
+       Icons that appear in several places are defined once here and reused
+       with <use href="#icon-name">. Copy this block into every page that uses them.
+       =================================================================== -->
+  <svg class="svg-sprite" aria-hidden="true" focusable="false">
+    <symbol id="icon-whatsapp" viewBox="0 0 24 24">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </symbol>
+    <symbol id="icon-x" viewBox="0 0 24 24">
+      <path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932ZM17.61 20.644h2.039L6.486 3.24H4.298Z"/>
+    </symbol>
+    <symbol id="icon-instagram" viewBox="0 0 24 24">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="17.5" cy="6.5" r="0.75" fill="currentColor" stroke="none"/>
+    </symbol>
+    <symbol id="icon-mail" viewBox="0 0 24 24">
+      <rect x="3" y="5" width="18" height="14" rx="2"/>
+      <path d="m3 7 9 6 9-6"/>
+    </symbol>
+    <symbol id="icon-close" viewBox="0 0 24 24">
+      <path d="M6 6l12 12M18 6L6 18"/>
+    </symbol>
+  </svg>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===================================================================
+       HEADER
+       =================================================================== -->
+  <header class="site-header" data-site-header>
+    <div class="container site-header__inner">
+      <a class="brand" href="index.html" aria-label="Ogas Integrated Services, home">
+        <img class="brand__logo" src="assets/images/logo.png" alt="" width="36" height="36">
+        <span class="brand__name">OIS</span>
+      </a>
+
+      <button class="nav-toggle" type="button" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu" data-nav-toggle>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary" data-site-nav>
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" href="index.html" aria-current="page">Home</a></li>
+          <li><a class="site-nav__link" href="about.html">About</a></li>
+          <li><a class="site-nav__link" href="features.html">Services</a></li>
+          <li><a class="site-nav__link" href="contact.html">Contact</a></li>
+        </ul>
+        <a class="btn btn--outline btn--small" href="contact.html">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===================================================================
+         HERO
+         =================================================================== -->
+    <section class="hero" id="home" aria-labelledby="hero-title">
+      <picture class="hero__media">
+        <source media="(max-width: 767px)" srcset="assets/images/hero-mobile.jpg">
+        <img src="assets/images/hero.jpg" alt="Farm workers planting young crops in a sunlit field" fetchpriority="high" decoding="async">
+      </picture>
+      <div class="hero__overlay" aria-hidden="true"></div>
+
+      <div class="container hero__content">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>Farming that works with nature</p>
+          <h1 class="hero__title" id="hero-title">Growing And Serving With Excellence</h1>
+          <p class="hero__lead">
+            Ogas Integrated Services (OIS) brings farm produce, expert consulting and agro-processing
+            together, helping you move forward sustainably and profitably.
+          </p>
+        </div>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary" href="#services">
+            Explore Our Services
+            <svg class="icon btn__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Service highlights: sit directly under the button -->
+      <div class="container hero__bottom">
+        <ul class="feature-strip" role="list">
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19c3-5 6-8 10-10"/></svg>
+            </span>
+            <div class="feature__body">
+              <strong class="feature__title">Farm Produce Sales</strong>
+              <p class="feature__text">Fresh, quality produce sourced with care.</p>
+            </div>
+          </li>
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 14c0-3 2.5-5 6-5 0 3.5-2.5 5-6 5z"/></svg>
+            </span>
+            <div class="feature__body">
+              <strong class="feature__title">Farm Consulting</strong>
+              <p class="feature__text">Practical guidance that lifts your yields.</p>
+            </div>
+          </li>
+          <li class="feature">
+            <span class="feature__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M3 21V11l6 4v-4l6 4V4h6v17z"/></svg>
+            </span>
+            <div class="feature__body">
+              <strong class="feature__title">Agro-Processing</strong>
+              <p class="feature__text">Value added from the farm to the market.</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Partner strip: pinned to the bottom edge of the hero.
+           Logos should be transparent PNG or SVG files. CSS renders them as white silhouettes. -->
+      <div class="container partners">
+        <p class="partners__label" id="partners-label">Trusted by our partners</p>
+        <ul class="partners__list" role="list" aria-labelledby="partners-label">
+          <li class="partners__item">
+            <img class="partners__logo" src="assets/images/partners/avira.png" alt="Avira" decoding="async">
+          </li>
+          <li class="partners__item">
+            <img class="partners__logo" src="assets/images/partners/armlink.png" alt="Xlcy" decoding="async">
+          </li>
+          <li class="partners__item">
+            <img class="partners__logo" src="assets/images/partners/flamy-tech.png" alt="Flamy Tech" decoding="async">
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===================================================================
+         SERVICES
+         =================================================================== -->
+    <section class="section section--dark" id="services" aria-labelledby="services-heading">
+      <div class="container">
+        <header class="section-heading" data-reveal>
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span>What we do</p>
+          <h2 class="section-heading__title" id="services-heading">Integrated services, rooted in the field.</h2>
+          <p class="section-heading__lead">
+            From the first seed to the finished product, every service works together to
+            support your farm and your business.
+          </p>
+        </header>
+
+        <div class="service-grid">
+          <article class="service-card" data-reveal>
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M5 19c0-8 5-14 14-14 0 9-6 14-14 14z"/><path d="M5 19c3-5 6-8 10-10"/></svg>
+            </span>
+            <h3 class="service-card__title">Farm Produce Sales</h3>
+            <p class="service-card__text">
+              Fresh, carefully handled farm produce supplied to households, retailers and businesses.
+            </p>
+            <a class="service-card__link" href="features.html#produce">
+              Learn more
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card" data-reveal data-reveal-delay="100">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M12 21v-9"/><path d="M12 12c0-4-3-6-7-6 0 4 3 6 7 6z"/><path d="M12 14c0-3 2.5-5 6-5 0 3.5-2.5 5-6 5z"/></svg>
+            </span>
+            <h3 class="service-card__title">Farm Consulting</h3>
+            <p class="service-card__text">
+              Practical, field-tested advice on planning, planting and managing your farm for better yields.
+            </p>
+            <a class="service-card__link" href="features.html#consulting">
+              Learn more
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card" data-reveal data-reveal-delay="200">
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><path d="M3 21V11l6 4v-4l6 4V4h6v17z"/></svg>
+            </span>
+            <h3 class="service-card__title">Agro-Processing</h3>
+            <p class="service-card__text">
+              Turning raw harvests into market-ready products, reducing waste and increasing their value.
+            </p>
+            <a class="service-card__link" href="features.html#processing">
+              Learn more
+              <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+          </article>
+
+          <article class="service-card service-card--upcoming" data-reveal data-reveal-delay="300">
+            <span class="service-card__badge"><span class="service-card__badge-dot" aria-hidden="true"></span>Coming soon</span>
+            <span class="service-card__icon" aria-hidden="true">
+              <svg class="icon" viewBox="0 0 24 24"><circle cx="7" cy="17" r="3"/><circle cx="18" cy="18" r="2"/><path d="M10 17h6M4 14V8h6l2 4h5v3"/></svg>
+            </span>
+            <h3 class="service-card__title">Equipment Supply</h3>
+            <p class="service-card__text">
+              Reliable farm equipment to help you work faster and more efficiently. Launching soon.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================================================================
+       FOOTER
+       =================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="site-footer__grid">
+        <div class="site-footer__brand">
+          <a class="brand" href="index.html" aria-label="Ogas Integrated Services, home">
+            <img class="brand__logo" src="assets/images/logo.png" alt="" width="36" height="36">
+            <span class="brand__name">OIS</span>
+          </a>
+          <p class="site-footer__blurb">
+            Ogas Integrated Services: farm produce sales, farm consulting and agro-processing
+            under one roof.
+          </p>
+        </div>
+
+        <nav aria-label="Footer">
+          <h2 class="site-footer__heading">Explore</h2>
+          <ul class="site-footer__links" role="list">
+            <li><a class="site-footer__link" href="index.html">Home</a></li>
+            <li><a class="site-footer__link" href="about.html">About</a></li>
+            <li><a class="site-footer__link" href="features.html">Services</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div>
+          <h2 class="site-footer__heading">Get in touch</h2>
+          <ul class="site-footer__links" role="list">
+            <li>
+              <a class="site-footer__link site-footer__link--icon" href="https://wa.me/2349067234304" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp: +234 906 723 4304">
+                <svg class="icon icon--filled" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                <span>+234 906 723 4304</span>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link site-footer__link--icon" href="https://wa.me/2347010642319" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp: +234 701 064 2319">
+                <svg class="icon icon--filled" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+                <span>+234 701 064 2319</span>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link site-footer__link--icon" href="https://x.com/ogasintegras" target="_blank" rel="noopener noreferrer" aria-label="Follow us on X (Twitter): @ogasintegras">
+                <svg class="icon icon--filled" aria-hidden="true"><use href="#icon-x"/></svg>
+                <span>@ogasintegras</span>
+              </a>
+            </li>
+            <li>
+              <a class="site-footer__link site-footer__link--icon" href="https://www.instagram.com/ogas.integratedservices" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram: @ogas.integratedservices">
+                <svg class="icon" aria-hidden="true"><use href="#icon-instagram"/></svg>
+                <span>@ogas.integratedservices</span>
+              </a>
+            </li>
+            <!-- PLACEHOLDER: replace with the real email address -->
+            <li>
+              <a class="site-footer__link site-footer__link--icon" href="mailto:ogasintegratedservices@gmail.com">
+                <svg class="icon" aria-hidden="true"><use href="#icon-mail"/></svg>
+                <span>ogasintegratedservices@gmail.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-current-year>2026</span> Ogas Integrated Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===================================================================
+       FLOATING WHATSAPP
+       Without JavaScript the round button is a plain link to the first line.
+       With JavaScript (js/main.js) it opens a panel that lets the visitor pick a line.
+       Numbers are written for wa.me: country code + number, no "+", spaces or leading zero.
+       =================================================================== -->
+  <div class="whatsapp-float" data-whatsapp-float>
+    <div class="whatsapp-float__panel" id="whatsapp-panel" data-whatsapp-panel>
+      <p class="whatsapp-float__title">Chat with us on WhatsApp</p>
+      <p class="whatsapp-float__subtitle">Choose a line and we will reply as soon as we can.</p>
+      <ul class="whatsapp-float__list" role="list">
+        <li>
+          <a class="whatsapp-float__link" href="https://wa.me/2349067234304?text=Hello%20Ogas%20Integrated%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">
+            <span class="whatsapp-float__link-icon" aria-hidden="true">
+              <svg class="icon icon--filled"><use href="#icon-whatsapp"/></svg>
+            </span>
+            <span>
+              <span class="whatsapp-float__link-label">Line 1</span>
+              <span class="whatsapp-float__link-number">+234 906 723 4304</span>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a class="whatsapp-float__link" href="https://wa.me/2347010642319?text=Hello%20Ogas%20Integrated%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer">
+            <span class="whatsapp-float__link-icon" aria-hidden="true">
+              <svg class="icon icon--filled"><use href="#icon-whatsapp"/></svg>
+            </span>
+            <span>
+              <span class="whatsapp-float__link-label">Line 2</span>
+              <span class="whatsapp-float__link-number">+234 701 064 2319</span>
+            </span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <a class="whatsapp-float__button" href="https://wa.me/2349067234304?text=Hello%20Ogas%20Integrated%20Services%2C%20I%20would%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp" data-whatsapp-toggle>
+      <svg class="icon icon--filled whatsapp-float__icon whatsapp-float__icon--open" aria-hidden="true"><use href="#icon-whatsapp"/></svg>
+      <svg class="icon whatsapp-float__icon whatsapp-float__icon--close" aria-hidden="true"><use href="#icon-close"/></svg>
+    </a>
+  </div>
+</body>
+</html>

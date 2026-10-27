@@ -1,0 +1,202 @@
+.page-banner--features .page-banner__media {
+  object-position: 60% 70%;
+}
+
+/* --------------------------------------------------------------------------
+   2. Service detail blocks (photo + text, alternating sides on desktop)
+   -------------------------------------------------------------------------- */
+.service-detail {
+  padding-block: clamp(3.5rem, 2.5rem + 4vw, 6rem);
+}
+
+.service-detail__layout {
+  display: grid;
+  gap: 2rem;
+  align-items: center;
+}
+
+.service-detail__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+
+.service-detail__title {
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  line-height: 1.08;
+  text-wrap: balance;
+}
+
+.service-detail__lead {
+  max-width: 34rem;
+  color: var(--color-ink-600);
+  text-wrap: pretty;
+}
+
+/* --------------------------------------------------------------------------
+   3. Check list — lime tick beside each point
+   -------------------------------------------------------------------------- */
+.check-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.check-list li {
+  position: relative;
+  padding-left: 1.9rem;
+  font-size: 0.95rem;
+}
+
+.check-list li::before {
+  content: "";
+  position: absolute;
+  top: 0.2em;
+  left: 0;
+  width: 1.15rem;
+  height: 1.15rem;
+  border-radius: 50%;
+  background: var(--color-lime-400);
+}
+
+.check-list li::after {
+  content: "";
+  position: absolute;
+  top: 0.38em;
+  left: 0.42rem;
+  width: 0.3rem;
+  height: 0.55rem;
+  border: solid var(--color-forest-900);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* --------------------------------------------------------------------------
+   4. Coming-soon panel (Equipment Supply)
+   -------------------------------------------------------------------------- */
+.upcoming {
+  padding-block: clamp(3rem, 2rem + 4vw, 5rem);
+}
+
+.upcoming-panel {
+  display: grid;
+  gap: 1.5rem;
+  padding: clamp(1.75rem, 1.25rem + 2vw, 3rem);
+  border: 1px dashed rgba(16, 34, 26, 0.3);
+  border-radius: var(--radius-xl);
+  background: rgba(255, 255, 255, 0.55);
+}
+
+.upcoming-panel__icon {
+  display: grid;
+  place-items: center;
+  width: 3.75rem;
+  height: 3.75rem;
+  border-radius: var(--radius-md);
+  background: var(--color-forest-900);
+  color: var(--color-lime-400);
+}
+
+.upcoming-panel__icon .icon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+.upcoming-panel__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--color-stone-300);
+  border-radius: var(--radius-pill);
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.upcoming-panel__badge-dot {
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: var(--color-forest-700);
+}
+
+.upcoming-panel__title {
+  margin-top: 0.75rem;
+  font-family: var(--font-display);
+  font-size: var(--text-h2);
+  font-weight: 500;
+  line-height: 1.08;
+}
+
+.upcoming-panel__text {
+  max-width: 36rem;
+  margin-top: 0.6rem;
+  color: var(--color-ink-600);
+  text-wrap: pretty;
+}
+
+.upcoming-panel__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Catalog gateway chips (inside the shared .cta-panel)
+   -------------------------------------------------------------------------- */
+.chip-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  max-width: 40rem;
+  margin: 0.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.chip {
+  display: inline-block;
+  padding: 0.45rem 0.95rem;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: var(--radius-pill);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.8rem;
+  text-decoration: none;
+  transition: border-color 0.25s ease, color 0.25s ease, background-color 0.25s ease;
+}
+
+.chip:hover {
+  border-color: var(--color-lime-400);
+  background: rgba(201, 242, 122, 0.08);
+  color: var(--color-lime-400);
+}
+
+@media (min-width: 1024px) {
+  .service-detail__layout {
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .service-detail__layout--reverse .service-detail__media {
+    order: 2;
+  }
+
+  .upcoming-panel {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .upcoming-panel__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

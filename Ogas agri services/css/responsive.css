@@ -1,0 +1,214 @@
+/* ==========================================================================
+   Ogas Integrated Services (OIS v1)
+   css/responsive.css — mobile-first breakpoints.
+
+   The base (phone) styles live in css/style.css. This file only ever adds
+   or overrides styles as the screen gets wider, using min-width queries:
+
+     768px  — tablets
+     1024px — laptops / desktop (full desktop navigation)
+     1280px — large desktop
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Tablets — 768px and up
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  :root {
+    --gutter: 2rem;
+    --header-height: 5rem;
+
+    /* On wider screens the copy block sits a little higher in the stack */
+    --hero-scrim-y: 40%;
+  }
+
+  /* Hero stack: a touch more room at the bottom, larger gaps between the groups */
+  .hero {
+    padding-bottom: 2.5rem;
+  }
+
+  .hero__copy {
+    gap: 1.5rem;
+  }
+
+  .hero__actions {
+    margin-top: 2rem;
+  }
+
+  .hero__bottom {
+    margin-top: 2.5rem;
+  }
+
+  /* Feature highlights: icon beside text, centred as a compact group */
+  .feature-strip {
+    display: flex;
+    justify-content: center;
+    gap: 2.5rem;
+    max-width: 56rem;
+    margin-inline: auto;
+  }
+
+  .feature {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.75rem;
+    text-align: left;
+  }
+
+  /* Nudges the icon down so it lines up with the first line of the title */
+  .feature__icon {
+    margin-top: 0.05rem;
+  }
+
+  .feature__title {
+    font-size: 0.6875rem;
+  }
+
+  .feature__text {
+    display: block;
+    max-width: 14rem;
+    margin-top: 0.25rem;
+    color: var(--color-text-muted-on-dark);
+    font-size: 0.75rem;
+    line-height: 1.5;
+  }
+
+  .partners__list {
+    gap: 0.75rem 3rem;
+  }
+
+  .partners__logo {
+    height: 1.5rem;
+    max-width: 9rem;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-footer__brand {
+    grid-column: 1 / -1;
+  }
+
+  /* Floating WhatsApp: slightly larger, a little further from the screen edge */
+  .whatsapp-float {
+    right: 1.5rem;
+    bottom: 1.5rem;
+  }
+
+  .whatsapp-float__button {
+    width: 3.5rem;
+    height: 3.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Desktop — 1024px and up
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  /* Full navigation replaces the hamburger menu */
+  .nav-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 2.5rem;
+    padding: 0;
+    background: transparent;
+    border-bottom: 0;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    transition: none;
+  }
+
+  .site-nav__list {
+    flex-direction: row;
+    gap: 2.25rem;
+  }
+
+  .site-nav__link {
+    position: relative;
+    padding: 0.4rem 0;
+    border-bottom: 0;
+    font-size: 0.9rem;
+  }
+
+  /* Animated underline on hover and for the current page */
+  .site-nav__link::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 1px;
+    background: var(--color-lime-400);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s var(--ease-out);
+  }
+
+  .site-nav__link:hover::after,
+  .site-nav__link[aria-current="page"]::after {
+    transform: scaleX(1);
+  }
+
+  .eyebrow {
+    font-size: 0.72rem;
+  }
+
+  .hero {
+    padding-bottom: 3rem;
+  }
+
+  .feature-strip {
+    gap: 4rem;
+  }
+
+  .partners__list {
+    gap: 0.75rem 3.5rem;
+  }
+
+  .partners__logo {
+    height: 1.65rem;
+    max-width: 10rem;
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .site-footer__grid {
+    grid-template-columns: 1.6fr 1fr 1fr;
+    gap: 4rem;
+  }
+
+  .site-footer__brand {
+    grid-column: auto;
+  }
+
+  .whatsapp-float {
+    right: 2rem;
+    bottom: 2rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Large desktop — 1280px and up
+   -------------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+  :root {
+    --gutter: 2.5rem;
+  }
+
+  .service-card {
+    padding: 2.25rem 2rem;
+  }
+}
